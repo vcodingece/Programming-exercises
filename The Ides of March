@@ -1,0 +1,8 @@
+def ides(day):
+    if day ==15:
+        return "Yes"
+    else:
+        return "No"
+day = int(input())
+result = ides(day)
+print(result)
