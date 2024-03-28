@@ -1,0 +1,7 @@
+def sort_strings(n,strings):
+  sorted_strings=sorted(strings)
+  return sorted_strings
+n=int(input())
+strings=input().split()
+sorted_strings=sort_strings(n,strings)
+print(" ".join(sorted_strings))
