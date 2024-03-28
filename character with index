@@ -1,0 +1,5 @@
+list1 = 'view'
+index = 0 
+for i in list1:
+    print('Index[', index, ']= ', i)
+    index +=1
