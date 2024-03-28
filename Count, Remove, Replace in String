@@ -1,0 +1,9 @@
+name="var###shi"
+count=name.count('#')
+print(count)
+name=name.replace('#',"")
+print(name)
+name=name+count*('#')
+print(name)
+name=count*('#')+name
+print(name)
