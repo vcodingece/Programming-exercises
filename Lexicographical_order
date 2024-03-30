@@ -5,6 +5,5 @@ def lexicographical_order(rows):
             print(char, end=" ")
             char = chr(ord(char)+1)
         print()
-
 num_rows = int(input("Enter number of rows:"))
 lexicographical_order(num_rows)
