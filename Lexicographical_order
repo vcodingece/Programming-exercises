@@ -1,4 +1,4 @@
-def floyds_triangle(rows):
+def lexicographical_order(rows):
     char='A'
     for i in range(1, rows + 1):
         for j in range(1, i + 1):
@@ -7,4 +7,4 @@ def floyds_triangle(rows):
         print()
 
 num_rows = int(input("Enter number of rows:"))
-floyds_triangle(num_rows)
+lexicographical_order(num_rows)
