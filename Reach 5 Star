@@ -1,0 +1,9 @@
+def can_reach_5_star(X, Y):
+    new_rating = X + Y 
+    if new_rating >= 2000:
+        return "YES"
+    else:
+        return "NO"
+X, Y = map(int,input().split())
+result = can_reach_5_star(X, Y)
+print(result)
