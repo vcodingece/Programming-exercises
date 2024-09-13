@@ -1,0 +1,6 @@
+G, S, B = map(interest,input().split())
+additional _gold = max(0, 5-G)
+additional _silver = max(0, 5-S)
+additional _bronze = max(0, 5-B)
+total_additional_medals = additional_gold + additional_silver + additional_bronze
+print(total_additional_medals)
