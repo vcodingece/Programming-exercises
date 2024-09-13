@@ -1,0 +1,20 @@
+Maxx_Calories = 1800
+
+def main():
+  meal1 = int(input())
+  meal2 = int(input())
+  meal3 = int(input())
+  calories = getTotalCalories(meal1, meal2, meal3)
+  if isWithinLimits(calories):
+    print("Good")
+  else:
+    print("Bad")
+    
+def getTotalCalories(meal1, meal2, meal3):
+  return meal1 + meal2 + meal3
+
+  
+def isWithinLimits(calories):
+  return calories <= Maxx_Calories
+    
+main()
