@@ -1,0 +1,9 @@
+salaries = [28, 36, 72, 12, 45, 18, 92]
+total = sum(salaries)
+size = len(salaries)
+AvgSalary = total / size
+above_average = []
+for salary in salaries:
+  if salary > AvgSalary:
+    above_average.append(salary)
+print(above_average)
