@@ -1,0 +1,27 @@
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        m = len(grid)
+        n = len(grid[0])
+        count = 0
+        for i in range(0,m):
+            for j in range(0,n):
+                if(grid[i][j]=='1'):
+                    count +=1
+                    grid[i][j] = '2'
+                    queue = [[i,j]]
+                    while(len(queue)!=0):
+                        posi, posj = queue[0][0], queue[0][1]
+                        if((posj-1)>=0 and grid[posi][posj-1]=='1'):
+                            grid[posi][posj-1]='2'
+                            queue.append([posi,posj-1])
+                        if((posj+1)<n and grid[posi][posj+1]=='1'):
+                            grid[posi][posj+1]='2'
+                            queue.append([posi,posj+1])
+                        if((posi-1)>=0 and grid[posi-1][posj]=='1'):
+                            grid[posi-1][posj]='2'
+                            queue.append([posi-1,posj])
+                        if((posi+1)<m and grid[posi+1][posj]=='1'):
+                            grid[posi+1][posj]='2'
+                            queue.append([posi+1,posj])
+                        queue.pop(0)
+        return count
