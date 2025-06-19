@@ -1,0 +1,34 @@
+class Solution:
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        m = len(grid)
+        n = len(grid[0])
+        maxarea=0
+        for i in range(0,m):
+            for j in range(0,n):
+                if(grid[i][j]==1):
+                    area = 1
+                    grid[i][j] = 2
+                    stack = [[i,j]]
+                    while(len(stack)!=0):
+                        posi, posj = stack[-1][0], stack[-1][1]
+                        if((posj-1)>=0 and grid[posi][posj-1]==1):
+                            area+=1
+                            grid[posi][posj-1]=2
+                            stack.append([posi,posj-1])
+                        elif((posj+1)<n and grid[posi][posj+1]==1):
+                            area+=1
+                            grid[posi][posj+1]=2
+                            stack.append([posi,posj+1])
+                        elif((posi-1)>=0 and grid[posi-1][posj]==1):
+                            area+=1
+                            grid[posi-1][posj]=2
+                            stack.append([posi-1,posj])
+                        elif((posi+1)<m and grid[posi+1][posj]==1):
+                            area+=1
+                            grid[posi+1][posj]=2
+                            stack.append([posi+1,posj])
+                        else:
+                            stack.pop()
+                    maxarea=max(maxarea,area)
+                    
+        return maxarea
