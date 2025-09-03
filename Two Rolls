@@ -1,0 +1,10 @@
+no_testcases = int(input())
+for i in range(no_testcases):
+    x, y = map(int, input().split())
+    left = 50 - x
+    min = 2*y
+    max = 2*y+10
+    if min <= left <= max:
+        print("Yes")
+    else:
+        print("No")
