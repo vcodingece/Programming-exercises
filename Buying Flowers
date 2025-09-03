@@ -1,0 +1,8 @@
+no_testcases = int(input())
+for i in range(no_testcases):
+    a = int(input())
+    for j in range(a//3 + 1):
+        remaining = a - 3 * j
+        if remaining % 2 == 0:
+            cost = j * 5 + (remaining // 2)*4
+    print(cost)
