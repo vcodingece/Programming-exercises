@@ -1,0 +1,9 @@
+a = map(int,input().split())
+list1 = list(a)
+days = 0
+total_days = 0
+if list1[0] == 4 or list1[0] > 4:
+    days = (list1[0] - 4)*24
+if list1[1] > 0:
+    total_days = days + list1[1]
+print(total_days)
