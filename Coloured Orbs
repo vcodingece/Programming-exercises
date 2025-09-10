@@ -1,0 +1,8 @@
+a = map(int,input().split())
+list1 = list(a)
+max_skill = 0
+if list1[0] < list1[1]:
+    max_skill = ((list1[1] - list1[0]) * 2) + (list1[0] * 5)
+else:
+    max_skill = ((list1[0] - list1[1]) * 1) + (list1[1] * 5)
+print(max_skill)
