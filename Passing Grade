@@ -1,0 +1,10 @@
+t = int(input())
+for i in range(t):
+    n = int(input())
+    a = list(map(int,input().split()))
+    stud = a[0]
+    count = 0
+    for x in a:
+        if x >= stud:
+            count += 1
+    print(count)
