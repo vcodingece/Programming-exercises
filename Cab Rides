@@ -1,0 +1,9 @@
+t = int(input())
+for i in range(t):
+    a = int(input())
+    cost = 0
+    if a == 1 or a == 2:
+        cost += 200
+    if a >= 3:
+        cost += a*100
+    print(cost)
