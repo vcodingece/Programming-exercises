@@ -1,0 +1,7 @@
+no_testcases = int(input())
+for i in range(no_testcases):
+    x, y = map(int, input().split())
+    total = x*y
+    hours = total // 60
+    mins = total % 60
+    print(hours, mins)
