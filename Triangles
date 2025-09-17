@@ -1,0 +1,3 @@
+angles = map(int,input().split())
+list1 = list(angles)
+print(180-list1[0]-list1[1])
