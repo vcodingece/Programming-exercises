@@ -1,0 +1,9 @@
+no_tests = int(input())
+for i in range(no_tests):
+    N, K = map(int, input().split())
+    ans = 0
+    if K > (N//2):
+        ans = N-K
+    elif K <= (N//2):
+        ans = K
+    print(ans)
